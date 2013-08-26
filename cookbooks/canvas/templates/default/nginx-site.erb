@@ -9,6 +9,7 @@ server  {
 			   default_type application/octet-stream;
                passenger_enabled on;
                rails_env production;
+			   client_max_body_size <%=node["canvas"]["max_body_size"]%>;
         }
 
 # HTTPS server
@@ -25,4 +26,5 @@ server  {
                ssl_certificate <%=node["canvas"]["ssl_cert"]%>;
                ssl_certificate_key <%=node["canvas"]["ssl_key"]%>;
                ssl_session_timeout  5m;
+			   client_max_body_size <%=node["canvas"]["max_body_size"]%>;
         }

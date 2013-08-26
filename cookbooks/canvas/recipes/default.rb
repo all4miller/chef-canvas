@@ -99,6 +99,13 @@ git "#{node["canvas"]["home_dir"]}/lms" do
 end
 
 directory "#{node["canvas"]["home_dir"]}/lms/tmp" do
+  owner node["canvas"]["system_user"]
+  group  node["canvas"]["system_group"]
+  mode 0777
+  action :create
+end
+
+directory "#{node["canvas"]["home_dir"]}/lms/tmp" do
   user    node["canvas"]["system_user"]
   group   node["canvas"]["system_group"]
   action :create
