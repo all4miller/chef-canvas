@@ -17,6 +17,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+apt_repository "REDIS_PPA" do
+  uri "http://ppa.launchpad.net/chris-lea/redis-server/ubuntu"
+  distribution "precise"
+  components ["main"]
+  keyserver "keyserver.ubuntu.com"
+  key "C7917B12"
+  notifies :run, resources(:execute => "apt-get update"), :immediately
+end
 
 package "redis-server"
 
