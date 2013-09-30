@@ -147,6 +147,12 @@ script "Lets get the required GEMS" do
 	code "bundle --path vendor/bundle --without=sqlite"
 end
 
+template "/etc/logrotate.d/canvas" do
+	source "logrotate-canvas.erb"
+	owner "root"
+	group "root"
+	mode 0444
+end
 
 template "/etc/profile.d/canvas-enviroment.sh" do
 	source "canvas-enviorment.sh.erb"

@@ -1,0 +1,10 @@
+# FROM: logrotate-canvas.erb
+<%=node["canvas"]["home_dir"]%>/lms/log/*.log {
+    compress
+    copytruncate
+    daily
+    dateext
+    delaycompress
+    missingok
+    rotate 3
+}
