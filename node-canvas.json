@@ -11,7 +11,7 @@
 		"daemonize":"yes"
 		},
 	"postgresql": {
-		"password":{ "postgres":"helloworld" },
+		"password":{ "postgres":"super_acid_macbook" },
 		"hba": [ { "method":"md5", "address":"127.0.0.1/32" } ],
 		"listen_addresses":"127.0.0.1"
 		},
@@ -19,9 +19,9 @@
 		"redis_server": "127.0.0.1",
 		"sql_server": "127.0.0.1",
 		"sql_user": "postgres",
-		"sql_password": "helloworld",
+		"sql_password": "super_acid_macbook",
 		"fqdn": "canvas.local",
-		"random_key":"231eb9704dc334012f4734f4001c42d158a3",
+		"random_key":"231eb9704dc334012f473sdfljhsdfgjhgsdf876sdfijhsdf87givsdvgy7tvw86tsidhgv76sd4f4001c42d158a3",
 		"sql_db_create_db": true,
 		"install_qti_tools": true
 		}

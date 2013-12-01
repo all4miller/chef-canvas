@@ -13,7 +13,7 @@ shopt -s -o nounset
 declare -rx SCRIPT=${0##*/}
 CHEF_SOLO_CONFIG="chef-solo-config.rb"
 RUN_LIST="node-canvas.json"
-REQURIED_PACKAGES="rubygems joe chef"
+REQURIED_PACKAGES="rubygems chef"
 
 if [ $# -eq 0 ] ; then
    printf "%s\n" "Type -h for help."
